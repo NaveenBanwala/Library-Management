@@ -1,0 +1,147 @@
+*{
+    margin:0%;
+    padding:0%;
+    box-sizing:border-box;
+}
+
+/* .navbar{
+    position:fixed;
+    width:100vw;
+} */
+.container-inner{
+    height:100vh;
+    width:100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: grey;
+
+}
+
+.login-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height :300px;
+    width : 500px;
+    background-color: azure;
+    gap:20px;
+    border: 5px solid transparent;
+    animation: borderColorChange 4s linear infinite;
+
+}
+
+/* Optional: only animate on hover */
+/* .login-container:hover {
+    animation-play-state: running; 
+} */
+
+
+@keyframes borderColorChange {
+    0% {
+    border-color: red green blue yellow;
+    }
+    25% {
+    border-color: green blue yellow red;
+    }
+    50% {
+    border-color: blue yellow red green;
+    }
+    75% {
+    border-color: yellow red green blue;
+    }
+    100% {
+    border-color: red green blue yellow;
+    }
+}
+
+
+
+
+h2{
+    font-weight: 700;
+    animation:colorCycle 2s infinite;
+    display: grid;
+}
+
+@keyframes colorCycle{
+    0%   { color: red; }
+    25%  { color: blue; }
+    50%  { color: green; }
+    75%  { color: orange; }
+    100% { color: red; }
+}
+
+
+input{
+    padding:5px 10px; 
+    font-weight: 500;
+}
+
+.button-style {
+    transition: all 0.3s ease-in-out;
+    max-height: max-content;
+    padding:5px 10px;
+    background-color: rgb(103, 166, 103);
+    animation: borderColorChange 4s linear infinite;
+    border-radius: 20px;
+}
+
+button:hover{
+    border:2px solid black;
+    background-color:rgb(8, 173, 228);
+}
+
+.register-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height :max-content;
+    width : 50vw;
+    background-color: azure;
+    gap:10px;
+    border: 5px solid transparent;
+    animation: borderColorChange 4s linear infinite;
+    padding:10px;
+    margin-top:200px;
+}
+span{
+
+    text-align: center;
+}
+
+.admin-dashboard{
+    margin-top:-60px;
+    height:450px;
+    width:900px;
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    background-color: rgb(160, 133, 137);
+    padding: 20px;
+    gap:10px;
+    padding-left:50px;
+    animation: borderColorChange 4s linear infinite;
+    border-radius: 20px;
+
+}
+
+.inner-items{
+    background-color: darkkhaki;
+    border-radius:20px;
+    border-width: 2px;
+    animation: borderColorChange 4s linear infinite;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    padding: 10px 10px;
+    
+}
+
+.inner-items p{
+    position:absolute;
+    top:10px;
+    font-weight: 800;
+
+}
