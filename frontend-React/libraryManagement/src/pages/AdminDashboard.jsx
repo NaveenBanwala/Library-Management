@@ -1,3 +1,5 @@
+import {Link} from "react-router-dom";
+
 function AdminDashboard(){
     return (
     <>
@@ -7,10 +9,12 @@ function AdminDashboard(){
     <div class="card shadow-sm inner-items" style={{height:"200px" ,width:"250px"}}> 
             <p class="card-text">Registered Users</p> 
             <div class="btn-group"> 
-                <button type="button" class="btn btn-sm btn-outline-secondary">View</button> 
-                <button type="button" class="btn btn-sm btn-outline-secondary">
-                Edit
-                </button> 
+                <Link to="/view" className="btn btn-sm btn-outline-secondary" role="button">
+    View
+  </Link>
+  <Link to="/edit" className="btn btn-sm btn-outline-secondary" role="button">
+    Edit
+  </Link> 
             </div> 
             </div>
             
@@ -18,10 +22,12 @@ function AdminDashboard(){
             <div class="card shadow-sm inner-items" style={{height:"200px" ,width:"250px"}}> 
             <p class="card-text">Handle Users</p>  
             <div class="btn-group"> 
-                <button type="button" class="btn btn-sm btn-outline-secondary">View</button> 
-                <button type="button" class="btn btn-sm btn-outline-secondary">
-                Edit
-                </button> 
+                <Link to="/view" className="btn btn-sm btn-outline-secondary" role="button">
+    View
+  </Link>
+  <Link to="/edit" className="btn btn-sm btn-outline-secondary" role="button">
+    Edit
+  </Link> 
             </div> 
             </div> 
 
@@ -29,21 +35,26 @@ function AdminDashboard(){
             <div class="card shadow-sm inner-items" style={{height:"200px" ,width:"250px"}}> 
             <p class="card-text">Add/Remove Book</p> 
             <div class="btn-group"> 
-                <button type="button" class="btn btn-sm btn-outline-secondary">View</button> 
-                <button type="button" class="btn btn-sm btn-outline-secondary">
-                Edit
-                </button> 
+                <Link to="/view" className="btn btn-sm btn-outline-secondary" role="button">
+    View
+  </Link>
+  <Link to="/edit" className="btn btn-sm btn-outline-secondary" role="button">
+    Edit
+  </Link> 
             </div>  
             </div>
 
             {/* Fourth */}
             <div class="card shadow-sm inner-items" style={{height:"200px" ,width:"250px"}}> 
             <p class="card-text">Issued books to Users</p> 
+           
             <div class="btn-group"> 
-                <button type="button" class="btn btn-sm btn-outline-secondary">View</button> 
-                <button type="button" class="btn btn-sm btn-outline-secondary">
-                Edit
-                </button> 
+             <Link to="/view" className="btn btn-sm btn-outline-secondary" role="button">
+                  View
+               </Link>
+             <Link to="/edit" className="btn btn-sm btn-outline-secondary" role="button">
+                 Edit
+              </Link>
             </div> 
             </div>
 
@@ -52,10 +63,12 @@ function AdminDashboard(){
             <div class="card shadow-sm inner-items" style={{height:"200px" ,width:"250px"}}> 
             <p class="card-text">All Book</p> 
             <div class="btn-group"> 
-                <button type="button" class="btn btn-sm btn-outline-secondary">View</button> 
-                <button type="button" class="btn btn-sm btn-outline-secondary">
-                Edit
-                </button> 
+               <Link to="/view" className="btn btn-sm btn-outline-secondary" role="button">
+    View
+  </Link>
+  <Link to="/edit" className="btn btn-sm btn-outline-secondary" role="button">
+    Edit
+  </Link>
             </div> 
             </div>
 
@@ -63,11 +76,14 @@ function AdminDashboard(){
 
             <div class="card shadow-sm inner-items" style={{height:"200px" ,width:"250px"}}> 
             <p class="card-text">Inventory</p> 
-            <div class="btn-group"> 
-                <button type="button" class="btn btn-sm btn-outline-secondary">View</button> 
-                <button type="button" class="btn btn-sm btn-outline-secondary">
-                Edit
-                </button> 
+            <div class="btn-group">  
+                <Link to="/view" className="btn btn-sm               btn-outline-secondary" role="button">
+                 View
+                </Link>
+              <Link to="/edit" className="btn btn-sm btn-outline-secondary" role="button">
+                 Edit
+               </Link>
+                
             </div> 
             </div> 
 
