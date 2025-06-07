@@ -1,25 +1,22 @@
 package com.naveen.librarymanagement.librarymanagement.Entity;
 
-
 import jakarta.persistence.*;
-
-
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-import java.security.Timestamp;
+import java.sql.Timestamp;
 
 @Entity
+@Table(name = "books")
 @Getter
 @Setter
 @ToString
-@Table(name = "books")
 public class Book {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="book_id")
+    @Column(name = "book_id")
     private Integer bookId;
 
     private String title;
@@ -32,7 +29,9 @@ public class Book {
 
     private Timestamp createdAt;
 
-    public Book(String title,String author, String publisher,String isbn, Integer totalCopies, Integer availableCopies ,String pdfPath,Timestamp createdAt) {
+    public Book() {}
+
+    public Book(String title, String author, String publisher, String isbn, Integer totalCopies, Integer availableCopies, String pdfPath, Timestamp createdAt) {
         this.title = title;
         this.author = author;
         this.publisher = publisher;
@@ -42,8 +41,6 @@ public class Book {
         this.pdfPath = pdfPath;
         this.createdAt = createdAt;
     }
-
-    public Book(){}
-
-    // Getters and Setters
 }
+
+

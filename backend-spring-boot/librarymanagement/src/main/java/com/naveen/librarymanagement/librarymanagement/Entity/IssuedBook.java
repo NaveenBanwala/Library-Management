@@ -1,18 +1,17 @@
 package com.naveen.librarymanagement.librarymanagement.Entity;
 
-
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-
-import java.util.Date;
 import lombok.ToString;
 
+import java.time.LocalDate;
+import java.util.Date;
 
 @Entity
+@Table(name = "issued_books")
 @Getter
 @Setter
-@Table(name = "issued_books")
 @ToString
 public class IssuedBook {
 
@@ -20,30 +19,30 @@ public class IssuedBook {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer issueId;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="user_id", referencedColumnName="user_id")
-    private User userId;
+    @ManyToOne
+    @JoinColumn(name = "book_id")
+    private Book book;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="book_id" ,referencedColumnName = "book_id")
-    private Book bookId;
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
 
-    private Date issueDate;
-    private Date dueDate;
+    @Column(name = "issue_date")
+    private LocalDate issueDate;
+
+    private LocalDate dueDate;
+
     private Date returnDate;
 
-    // Default constructor
     public IssuedBook() {}
 
-    // Parameterized constructor
-    public IssuedBook(User userId, Book bookId, Date issueDate, Date dueDate, Date returnDate) {
-        this.userId = userId;
-        this.bookId = bookId;
+    public IssuedBook(User user, Book book, LocalDate issueDate, LocalDate dueDate, Date returnDate) {
+        this.user = user;
+        this.book = book;
         this.issueDate = issueDate;
         this.dueDate = dueDate;
         this.returnDate = returnDate;
     }
-
-    // Getters and Setters
 }
+
 

@@ -19,7 +19,7 @@ public class Waitlist {
     private Integer waitlistId;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="user_id", referencedColumnName ="book_id" )
+    @JoinColumn(name="user_id", referencedColumnName ="user_id" )
     private User userId;
 
     @ManyToOne(fetch = FetchType.LAZY)
