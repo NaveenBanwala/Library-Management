@@ -1,13 +1,13 @@
-package com.naveen.librarymanagement.librarymanagement;
+package com.library.librarymanagement;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class LibrarymanagementApplicationTests {
+class LibraryManagementApplicationTests {
 
 	@Test
 	void contextLoads() {
 	}
 
-}
+} 
