@@ -56,23 +56,19 @@
     }
 }
 
-
-
-
-h2{
-    font-weight: 700;
-    animation:colorCycle 2s infinite;
-    display: grid;
-}
-
-@keyframes colorCycle{
-    0%   { color: red; }
-    25%  { color: blue; }
-    50%  { color: green; }
-    75%  { color: orange; }
+@keyframes colorCycle {
+    0% { color: red; }
+    25% { color: blue; }
+    50% { color: green; }
+    75% { color: orange; }
     100% { color: red; }
 }
 
+h2{
+    font-weight: 700;
+    animation: colorCycle 2s infinite;
+    display: grid;
+}
 
 input{
     padding:5px 10px; 
@@ -185,6 +181,294 @@ span{
 .footer-inner p{
     text-decoration: none;
     color: rgb(19, 135, 236);
+}
+
+/* General Styles */
+.app {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    padding-bottom: 2rem;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-control:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.form-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+/* Book Card Styles */
+.book-card {
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.book-cover {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f9fa;
+    margin-bottom: 1rem;
+}
+
+.book-cover img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.no-cover {
+    color: #6c757d;
+    font-size: 0.875rem;
+}
+
+.book-info {
+    text-align: center;
+}
+
+.book-info h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.book-info .author {
+    color: #6c757d;
+    margin-bottom: 0.5rem;
+}
+
+.book-actions {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+/* Dashboard Styles */
+.dashboard-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.dashboard-card {
+    background-color: #fff;
+    border-radius: 0.25rem;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Review Styles */
+.review-card {
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: #fff;
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.reviewer {
+    font-weight: bold;
+}
+
+.rating {
+    color: #ffc107;
+}
+
+.review-date {
+    color: #6c757d;
+    font-size: 0.875rem;
+}
+
+/* Error and Success Messages */
+.error-message {
+    color: #dc3545;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #dc3545;
+    border-radius: 0.25rem;
+    background-color: #f8d7da;
+}
+
+.success-message {
+    color: #28a745;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #28a745;
+    border-radius: 0.25rem;
+    background-color: #d4edda;
+}
+
+/* Loading Spinner */
+.loading-spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+}
+
+/* Responsive Grid */
+.books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+}
+
+/* Waitlist Styles */
+.waitlist-item {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    margin-bottom: 1rem;
+    background-color: #fff;
+}
+
+.waitlist-item .book-cover {
+    width: 100px;
+    height: 150px;
+    flex-shrink: 0;
+}
+
+.waitlist-item .book-info {
+    flex: 1;
+    text-align: left;
+}
+
+/* Profile Styles */
+.profile-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.profile-form {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 0.25rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .books-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+
+    .waitlist-item {
+        flex-direction: column;
+    }
+
+    .waitlist-item .book-cover {
+        width: 100%;
+        height: 200px;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+
+    .form-actions button {
+        width: 100%;
+    }
+}
+
+.footer {
+    margin-top: auto;
+    background-color: #343a40;
+    color: #fff;
+    padding: 2rem 0;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #adb5bd;
+    text-decoration: none;
+}
+
+/* Custom animations */
+@keyframes borderColorChange {
+    0% { border-color: red green blue yellow; }
+    25% { border-color: green blue yellow red; }
+    50% { border-color: blue yellow red green; }
+    75% { border-color: yellow red green blue; }
+    100% { border-color: red green blue yellow; }
+}
+
+@keyframes colorCycle {
+    0% { color: red; }
+    25% { color: blue; }
+    50% { color: green; }
+    75% { color: orange; }
+    100% { color: red; }
+}
+
+/* Custom styles that can't be achieved with Tailwind */
+.animated-border {
+    animation: borderColorChange 4s linear infinite;
+}
+
+.animated-text {
+    animation: colorCycle 2s infinite;
+}
+
+/* Custom transitions */
+.hover-scale {
+    transition: transform 0.2s ease-out;
+}
+
+.hover-scale:hover {
+    transform: scale(1.05);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }
 
 
