@@ -2,13 +2,11 @@ package com.naveen.librarymanagement.librarymanagement.Service;
 
 
 import com.naveen.librarymanagement.librarymanagement.Entity.Book;
-
+import com.naveen.librarymanagement.librarymanagement.Entity.User;
 import com.naveen.librarymanagement.librarymanagement.jpa.Booksjpa;
 import com.naveen.librarymanagement.librarymanagement.jpa.Issued_book;
 import com.naveen.librarymanagement.librarymanagement.jpa.Userjpa;
 import org.springframework.beans.factory.annotation.Autowired;
-
-import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Service;
 
 import com.naveen.librarymanagement.librarymanagement.Entity.IssuedBook;
@@ -31,7 +29,7 @@ public class IssuedBookService{
     @Autowired
     private Booksjpa bookRepo;
 
-    public IssuedBook issueBook(Long userId, Long bookId, LocalDate dueDate) {
+    public IssuedBook issueBook(Long userId, Integer bookId, LocalDate dueDate) {
         IssuedBook issuedBook = new IssuedBook();
 
         User user = userRepo.findById(userId)
@@ -49,7 +47,7 @@ public class IssuedBookService{
         return issuedBookRepo.save(issuedBook);
     }
 
-    public Optional<IssuedBook> getIssuedBookById(Long id) {
+    public Optional<IssuedBook> getIssuedBookById(Integer id) {
         return issuedBookRepo.findById(id);
     }
 
@@ -58,11 +56,11 @@ public class IssuedBookService{
     }
 
     public List<IssuedBook> getIssuedBooksByUser(Long userId) {
-        return issuedBookRepo.findByUserId(userId);
+        return issuedBookRepo.findByUser_userId(userId);
     }
 
     public List<IssuedBook> getIssuedBooksByBook(Integer bookId) {
-        return issuedBookRepo.findByBookId(bookId);
+        return issuedBookRepo.findByBook_bookId(bookId);
     }
 
     public List<IssuedBook> getCurrentlyIssuedBooks() {

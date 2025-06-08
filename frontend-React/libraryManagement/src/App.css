@@ -178,8 +178,15 @@ span{
 .footer-inner{
     text-align: center;
     font-weight: 700;
+    background-color: #1a1a1a;
 
 }
+
+.footer-inner p{
+    text-decoration: none;
+    color: rgb(19, 135, 236);
+}
+
 
 
 

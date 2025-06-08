@@ -18,7 +18,7 @@ public class BookService {
     }
 
     public Optional<Book> getBookById(Long id) {
-        return booksJpaRepo.findById(id);
+        return booksJpaRepo.findById(id.intValue());
     }
 
     public Book addBook(Book book) {
@@ -26,7 +26,7 @@ public class BookService {
     }
 
     public void deleteBook(Long id) {
-        booksJpaRepo.deleteById(id);
+        booksJpaRepo.deleteById(id.intValue());
     }
 
 
